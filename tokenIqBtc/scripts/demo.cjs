@@ -176,7 +176,7 @@ async function main() {
   
   const invoiceTokenId = vaultCreatedEvent.args.invoiceTokenId;
   const vaultAddress = vaultCreatedEvent.args.vaultAddress;
-  const vault = await ethers.getContractAt("ProtegoYieldVault", vaultAddress);
+  const vault = await ethers.getContractAt("ProtegoYieldVaultCore", vaultAddress);
   
   logSuccess(`Invoice NFT created with ID: ${invoiceTokenId}`);
   logSuccess(`ERC-4626 Vault deployed: ${vaultAddress}`);
@@ -267,26 +267,17 @@ async function main() {
 // =========================================================================
     logStep(8, "Generate Yield and Demonstrate Returns");
 
-    // Deploy yield strategy
-    const ProtegoYieldStrategy = await ethers.getContractFactory("ProtegoYieldStrategy");
-    const yieldStrategy = await ProtegoYieldStrategy.deploy(usdcAddress, masterVaultAddress);
-    await yieldStrategy.deployed();
-    const yieldStrategyAddress = yieldStrategy.address;
-
-    logInfo(`Yield Strategy deployed: ${yieldStrategyAddress}`);
-
-    // Simulate yield generation (3% for demo)
+     // Simulate yield generation (3% for demo)
     const currentAssets = await vault.totalAssets();
     const yieldAmount = currentAssets.mul(3).div(100);
 
     // Fund Marina with additional USDC for yield generation
     await usdc.mint(marina.address, yieldAmount);
 
-    // FIXED: Use Marina (the vault owner) instead of deployer to generate yield
-    await usdc.connect(marina).approve(vaultAddress, yieldAmount);
-    await vault.connect(marina).generateYield(yieldAmount);
+    await usdc.connect(marina).transfer(vault.address, yieldAmount);
 
     const assetsAfterYield = await vault.totalAssets();
+
     logSuccess(`Generated ${ethers.utils.formatUnits(yieldAmount, 6)} USDC yield`);
     logInfo(`Vault assets after yield: ${ethers.utils.formatUnits(assetsAfterYield, 6)} USDC`);
   // =========================================================================
@@ -342,7 +333,7 @@ async function main() {
   console.log("   • Automated risk assessment");
   console.log("   • Non-custodial user wallet control");
   
-  console.log("\n" + c.green("Ready for hackathon submission! 🏆"));
+  console.log("\n" + c.green("Demo successfull!!! 🏆"));
 }
 
 if (require.main === module) {

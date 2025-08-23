@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * 🚀 PROTEGO.AI DEPLOYMENT SCRIPT - Updated Architecture
+ * 🚀 PROTEGO.AI DEPLOYMENT SCRIPT
  * 
  * Deploys the complete Protego.ai smart contract suite with separated architecture:
  * - Mock USDC for testing
@@ -302,10 +302,8 @@ async function main() {
   console.log("\n" + c.cyan("🚀 Next Steps:"));
   console.log("   1. Run demo: npm run demo");
   console.log("   2. Test GOAT agent interactions");
-  console.log("   3. Test core vault functionality");
-  console.log("   4. Submit for hackathon! 🏆");
-  
-  console.log(c.green("\n✨ Ready for hackathon demo with GOAT integration!"));
+  console.log("   3. Test core vault functionality");  
+  console.log(c.green("\n🎉 Deployment successful!"));
   
   return deploymentData;
 }
