@@ -1,22 +1,22 @@
 {
   "network": {
     "name": "unknown",
-    "chainId": 31337
+    "chainId": 1328
   },
-  "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
-  "timestamp": "2025-08-23T23:24:55.492Z",
+  "deployer": "0x506e724d7FDdbF91B6607d5Af0700d385D952f8a",
+  "timestamp": "2025-08-23T21:20:27.925Z",
   "architecture": "complete-suite-with-multi-invoice-notes",
   "contracts": {
-    "mockUSDC": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-    "masterVault": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-    "invoiceNFT": "0x75537828f2ce51be7289709686A69CbFDbB714F1",
-    "vaultCore": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
-    "vaultGoat": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
-    "multiInvoiceNotes": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
+    "mockUSDC": "0x218565BeC68691178FC61B28FCaEb78592088FDF",
+    "masterVault": "0xdED9081dd5e11452d3B1BD8bDB178F9ad8959A6a",
+    "invoiceNFT": "0x2b17aAdD7C4523b6359784742186DC5f2Ace90C2",
+    "vaultCore": "0xe76A99F6088A793abB88B6E831a9aA7543bc0E1D",
+    "vaultGoat": "0xa0A229bF74c283CC84D2f13f29d4408F3Dee6eab",
+    "multiInvoiceNotes": "0x010576bCA9bA1A0b1598644b277B22992541061A"
   },
   "vaultParameters": {
     "fundingTarget": "50000.0",
-    "fundingDeadline": "2025-09-22T23:24:55.000Z",
+    "fundingDeadline": "2025-09-22T21:20:11.000Z",
     "invoiceTokenId": 1
   },
   "sampleData": {
@@ -68,9 +68,9 @@
     "platformFeeBps": 200,
     "baseYieldRate": 800,
     "seiMultiplier": 150,
-    "treasury": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "treasury": "0x506e724d7FDdbF91B6607d5Af0700d385D952f8a",
     "goatAgent": {
-      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "address": "0x506e724d7FDdbF91B6607d5Af0700d385D952f8a",
       "name": "Protego GOAT Agent",
       "description": "AI-powered yield optimization agent"
     }
