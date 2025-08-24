@@ -1,0 +1,78 @@
+{
+  "network": {
+    "name": "unknown",
+    "chainId": 1328
+  },
+  "deployer": "0x506e724d7FDdbF91B6607d5Af0700d385D952f8a",
+  "timestamp": "2025-08-23T22:37:15.401Z",
+  "architecture": "complete-suite-with-multi-invoice-notes",
+  "contracts": {
+    "mockUSDC": "0xa4b3Cd6AF5faA2800df38c64e1C24BEBb5291fD6",
+    "masterVault": "0x7566ff0c50fa6A60c8902230d2fD828ff1587Dd5",
+    "invoiceNFT": "0x695Fb9Fbeac8758369e11165a5033a5b65e69B29",
+    "vaultCore": "0xf575eE8F71ac2A1A55B2C0B5e5D7d15d73626242",
+    "vaultGoat": "0xde949800B62A970aD936AE817DbFC304106a9E61",
+    "multiInvoiceNotes": "0xAE087df2D8A8aD274bcc04648C522a064dDc5A36"
+  },
+  "vaultParameters": {
+    "fundingTarget": "50000.0",
+    "fundingDeadline": "2025-09-22T22:37:01.000Z",
+    "invoiceTokenId": 1
+  },
+  "sampleData": {
+    "invoiceIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "noteTypeIds": [],
+    "portfolios": [
+      {
+        "name": "Q1 2024 High-Yield Portfolio",
+        "invoiceIds": [
+          1,
+          2,
+          3
+        ],
+        "minimumPurchase": {
+          "type": "BigNumber",
+          "hex": "0x056bc75e2d63100000"
+        },
+        "pricePerUnit": {
+          "type": "BigNumber",
+          "hex": "0x0de0b6b3a7640000"
+        }
+      },
+      {
+        "name": "Q2 2024 Balanced Portfolio",
+        "invoiceIds": [
+          4,
+          5,
+          6
+        ],
+        "minimumPurchase": {
+          "type": "BigNumber",
+          "hex": "0x02b5e3af16b1880000"
+        },
+        "pricePerUnit": {
+          "type": "BigNumber",
+          "hex": "0x14d1120d7b160000"
+        }
+      }
+    ]
+  },
+  "configuration": {
+    "platformFeeBps": 200,
+    "baseYieldRate": 800,
+    "seiMultiplier": 150,
+    "treasury": "0x506e724d7FDdbF91B6607d5Af0700d385D952f8a",
+    "goatAgent": {
+      "address": "0x506e724d7FDdbF91B6607d5Af0700d385D952f8a",
+      "name": "Protego GOAT Agent",
+      "description": "AI-powered yield optimization agent"
+    }
+  }
+}

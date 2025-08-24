@@ -1,0 +1,78 @@
+{
+  "network": {
+    "name": "unknown",
+    "chainId": 31337
+  },
+  "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "timestamp": "2025-08-23T23:24:55.492Z",
+  "architecture": "complete-suite-with-multi-invoice-notes",
+  "contracts": {
+    "mockUSDC": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "masterVault": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+    "invoiceNFT": "0x75537828f2ce51be7289709686A69CbFDbB714F1",
+    "vaultCore": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+    "vaultGoat": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+    "multiInvoiceNotes": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
+  },
+  "vaultParameters": {
+    "fundingTarget": "50000.0",
+    "fundingDeadline": "2025-09-22T23:24:55.000Z",
+    "invoiceTokenId": 1
+  },
+  "sampleData": {
+    "invoiceIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "noteTypeIds": [],
+    "portfolios": [
+      {
+        "name": "Q1 2024 High-Yield Portfolio",
+        "invoiceIds": [
+          1,
+          2,
+          3
+        ],
+        "minimumPurchase": {
+          "type": "BigNumber",
+          "hex": "0x056bc75e2d63100000"
+        },
+        "pricePerUnit": {
+          "type": "BigNumber",
+          "hex": "0x0de0b6b3a7640000"
+        }
+      },
+      {
+        "name": "Q2 2024 Balanced Portfolio",
+        "invoiceIds": [
+          4,
+          5,
+          6
+        ],
+        "minimumPurchase": {
+          "type": "BigNumber",
+          "hex": "0x02b5e3af16b1880000"
+        },
+        "pricePerUnit": {
+          "type": "BigNumber",
+          "hex": "0x14d1120d7b160000"
+        }
+      }
+    ]
+  },
+  "configuration": {
+    "platformFeeBps": 200,
+    "baseYieldRate": 800,
+    "seiMultiplier": 150,
+    "treasury": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "goatAgent": {
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "name": "Protego GOAT Agent",
+      "description": "AI-powered yield optimization agent"
+    }
+  }
+}
